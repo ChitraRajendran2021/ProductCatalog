@@ -16,6 +16,9 @@ public class ProductController {
     @Autowired
     private ProductData productData;
 
+    @Autowired
+    private FuzzySearch fuzzySearch;
+
     @PostMapping
     public ResponseEntity<Void> addProduct(@RequestBody Product product) {
         logger.info("Adding new product: {}", product.getName());
@@ -27,6 +30,11 @@ public class ProductController {
     public List<Product> getProducts() {
         logger.info("Fetching all products");
         return productData.getAllProducts();
+    }
+
+    @GetMapping("/search")
+    public List<Product> searchProducts(@RequestParam("query") String query) {
+        return fuzzySearch.searchProducts(query, productData.getAllProducts());
     }
 
     @GetMapping("/{id}")

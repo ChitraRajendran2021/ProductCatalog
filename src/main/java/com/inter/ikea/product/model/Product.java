@@ -5,14 +5,14 @@ public class Product {
     private String name;
     private String category;
     private String description;
-    private Double price;
+    private Integer price;
     private String imageUrl;
 
     // Default constructor
     public Product() {}
 
     // Parameterized constructor
-    public Product(Long id, String name, String category, String description, Double price, String imageUrl) {
+    public Product(Long id, String name, String category, String description, Integer price, String imageUrl) {
         this.id = id;
         this.name = name;
         this.category = category;
@@ -38,7 +38,7 @@ public class Product {
         return description;
     }
 
-    public Double getPrice() {
+    public Integer getPrice() {
         return price;
     }
 
@@ -63,7 +63,7 @@ public class Product {
         this.description = description;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(Integer price) {
         this.price = price;
     }
 

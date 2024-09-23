@@ -11,8 +11,9 @@ import java.util.stream.Collectors;
 public class FuzzySearch {
 
     private static final Logger logger = LoggerFactory.getLogger(FuzzySearch.class);
-
-    // Function to calculate the Damerau-Levenshtein edit distance between two strings
+    /*
+    * Function to calculate the Damerau-Levenshtein edit distance between two strings
+     */ 
     public static int calculateEditDistance(String source, String target) {
         int sourceLength = source.length();
         int targetLength = target.length();
@@ -29,11 +30,9 @@ public class FuzzySearch {
             calculateDistance[0][j] = j; // Insertion cost 
         }
     
-        int i = 1;
-        while (i <= sourceLength) {
-            int j = 1;
-            while (j <= targetLength) {
-                // Calculate substitution cost
+        for (int i = 1; i <= sourceLength; i++) {
+            for (int j = 1; j <= targetLength; j++) {
+                // Calculating substitution cost
                 int substitutionCost = (source.charAt(i - 1) == target.charAt(j - 1)) ? 0 : 1;
 
                 // calculate minimal distance (deletion, insertion, substitution)
@@ -43,26 +42,24 @@ public class FuzzySearch {
 
                 calculateDistance[i][j] = Math.min(Math.min(deletion, insertion), substitution);
 
-                // Handle transposition if applicable
                 if (i > 1 && j > 1 &&
                     source.charAt(i - 1) == target.charAt(j - 2) &&
                     source.charAt(i - 2) == target.charAt(j - 1)) {
                     int transposition = calculateDistance[i - 2][j - 2] + substitutionCost;
                     calculateDistance[i][j] = Math.min(calculateDistance[i][j], transposition);
                 }
-
-                j++; // Increment inner loop index
             }
-            i++; // Increment outer loop index
         }
 
         logger.info("Final edit distance between '{}' and '{}' is: {}", source, target, calculateDistance[sourceLength][targetLength]);
 
-        // Return the computed edit distance between the two strings
+        // Return the calculated distance between the two strings
         return calculateDistance[sourceLength][targetLength];
     }
 
-    // Function to search products based on a fuzzy match of the search term
+    /*
+    * Function to search products based on a fuzzy match of the search term
+     */ 
     public List<Product> searchProducts(String searchTerm, List<Product> products) {
         logger.info("Starting fuzzy search for '{}'", searchTerm);
 
@@ -72,7 +69,7 @@ public class FuzzySearch {
             .filter(product -> {
                 int distance = calculateEditDistance(product.getName().toLowerCase(), searchTerm.toLowerCase());
                 logger.debug("Distance from '{}' to '{}': {}", searchTerm, product.getName(), distance);
-                return distance <= 5; 
+                return distance <= 3; 
             })
             .collect(Collectors.toList());
 

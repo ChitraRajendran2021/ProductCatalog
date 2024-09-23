@@ -1,0 +1,74 @@
+2024-09-23 22:43:25 - Starting ProductCatalogApplication using Java 17.0.5 with PID 6380 (/home/tzr494/ProductCatalog/target/classes started by tzr494 in /home/tzr494/ProductCatalog)
+2024-09-23 22:43:25 - No active profile set, falling back to 1 default profile: "default"
+2024-09-23 22:43:27 - Tomcat initialized with port(s): 8080 (http)
+2024-09-23 22:43:27 - Starting service [Tomcat]
+2024-09-23 22:43:27 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-09-23 22:43:27 - Initializing Spring embedded WebApplicationContext
+2024-09-23 22:43:27 - Root WebApplicationContext: initialization completed in 2247 ms
+2024-09-23 22:43:27 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-23 22:43:28 - Started ProductCatalogApplication in 4.428 seconds (process running for 5.357)
+2024-09-23 22:43:39 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-23 22:43:39 - Initializing Servlet 'dispatcherServlet'
+2024-09-23 22:43:40 - Completed initialization in 561 ms
+2024-09-23 22:43:40 - Initialized ProductData with 4 products
+2024-09-23 22:43:40 - Fetching product with id: 4
+2024-09-23 22:43:40 - Product found: Sofa
+2024-09-23 22:43:40 - Fetching product with id: 4
+2024-09-23 22:43:40 - Product found: Sofa
+2024-09-23 22:50:43 - Starting ProductCatalogApplication using Java 17.0.5 with PID 14579 (/home/tzr494/ProductCatalog/target/classes started by tzr494 in /home/tzr494/ProductCatalog)
+2024-09-23 22:50:43 - No active profile set, falling back to 1 default profile: "default"
+2024-09-23 22:50:48 - Tomcat initialized with port(s): 8080 (http)
+2024-09-23 22:50:48 - Starting service [Tomcat]
+2024-09-23 22:50:48 - Starting Servlet engine: [Apache Tomcat/10.1.11]
+2024-09-23 22:50:49 - Initializing Spring embedded WebApplicationContext
+2024-09-23 22:50:49 - Root WebApplicationContext: initialization completed in 5283 ms
+2024-09-23 22:50:50 - Tomcat started on port(s): 8080 (http) with context path ''
+2024-09-23 22:50:50 - Started ProductCatalogApplication in 9.86 seconds (process running for 12.124)
+2024-09-23 22:50:58 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-09-23 22:50:58 - Initializing Servlet 'dispatcherServlet'
+2024-09-23 22:50:58 - Completed initialization in 842 ms
+2024-09-23 22:50:59 - Initialized ProductData with 4 products
+2024-09-23 22:50:59 - Starting fuzzy search for 's'
+2024-09-23 22:50:59 - Calculating edit distance between 'mattress' and 's'
+2024-09-23 22:50:59 - Final edit distance between 'mattress' and 's' is: 7
+2024-09-23 22:50:59 - Calculating edit distance between 'sofa' and 's'
+2024-09-23 22:50:59 - Final edit distance between 'sofa' and 's' is: 3
+2024-09-23 22:50:59 - Calculating edit distance between 'tables' and 's'
+2024-09-23 22:50:59 - Final edit distance between 'tables' and 's' is: 5
+2024-09-23 22:50:59 - Calculating edit distance between 'sofa' and 's'
+2024-09-23 22:50:59 - Final edit distance between 'sofa' and 's' is: 3
+2024-09-23 22:50:59 - Fuzzy search complete. Found 3 products matching 's'
+2024-09-23 22:50:59 - Starting fuzzy search for 'so'
+2024-09-23 22:50:59 - Calculating edit distance between 'mattress' and 'so'
+2024-09-23 22:50:59 - Final edit distance between 'mattress' and 'so' is: 7
+2024-09-23 22:50:59 - Calculating edit distance between 'sofa' and 'so'
+2024-09-23 22:50:59 - Final edit distance between 'sofa' and 'so' is: 2
+2024-09-23 22:50:59 - Calculating edit distance between 'tables' and 'so'
+2024-09-23 22:50:59 - Final edit distance between 'tables' and 'so' is: 6
+2024-09-23 22:50:59 - Calculating edit distance between 'sofa' and 'so'
+2024-09-23 22:50:59 - Final edit distance between 'sofa' and 'so' is: 2
+2024-09-23 22:50:59 - Fuzzy search complete. Found 2 products matching 'so'
+2024-09-23 22:51:01 - Starting fuzzy search for 'sof'
+2024-09-23 22:51:01 - Calculating edit distance between 'mattress' and 'sof'
+2024-09-23 22:51:01 - Final edit distance between 'mattress' and 'sof' is: 8
+2024-09-23 22:51:01 - Calculating edit distance between 'sofa' and 'sof'
+2024-09-23 22:51:01 - Final edit distance between 'sofa' and 'sof' is: 1
+2024-09-23 22:51:01 - Calculating edit distance between 'tables' and 'sof'
+2024-09-23 22:51:02 - Final edit distance between 'tables' and 'sof' is: 6
+2024-09-23 22:51:02 - Calculating edit distance between 'sofa' and 'sof'
+2024-09-23 22:51:02 - Final edit distance between 'sofa' and 'sof' is: 1
+2024-09-23 22:51:02 - Fuzzy search complete. Found 2 products matching 'sof'
+2024-09-23 22:51:02 - Starting fuzzy search for 'sofa'
+2024-09-23 22:51:02 - Calculating edit distance between 'mattress' and 'sofa'
+2024-09-23 22:51:02 - Final edit distance between 'mattress' and 'sofa' is: 8
+2024-09-23 22:51:02 - Calculating edit distance between 'sofa' and 'sofa'
+2024-09-23 22:51:02 - Final edit distance between 'sofa' and 'sofa' is: 0
+2024-09-23 22:51:02 - Calculating edit distance between 'tables' and 'sofa'
+2024-09-23 22:51:02 - Final edit distance between 'tables' and 'sofa' is: 6
+2024-09-23 22:51:02 - Calculating edit distance between 'sofa' and 'sofa'
+2024-09-23 22:51:02 - Final edit distance between 'sofa' and 'sofa' is: 0
+2024-09-23 22:51:02 - Fuzzy search complete. Found 2 products matching 'sofa'
+2024-09-23 22:51:03 - Fetching product with id: 2
+2024-09-23 22:51:03 - Product found: Sofa
+2024-09-23 22:51:03 - Fetching product with id: 2
+2024-09-23 22:51:03 - Product found: Sofa

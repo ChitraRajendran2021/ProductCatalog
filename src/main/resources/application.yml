@@ -1,0 +1,16 @@
+logging:
+  level:
+    com:
+      inter:
+        ikea:
+          product: INFO
+  file:
+    name: logs/product-catalog.log
+    max-size: 10MB
+    max-history: 5
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+cors:
+  allowed-origins: "http://localhost:3000,http://localhost"
+
+

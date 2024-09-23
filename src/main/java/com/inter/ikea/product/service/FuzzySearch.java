@@ -69,7 +69,7 @@ public class FuzzySearch {
             .filter(product -> {
                 int distance = calculateEditDistance(product.getName().toLowerCase(), searchTerm.toLowerCase());
                 logger.debug("Distance from '{}' to '{}': {}", searchTerm, product.getName(), distance);
-                return distance <= 3; 
+                return distance <= 5; 
             })
             .collect(Collectors.toList());
 
